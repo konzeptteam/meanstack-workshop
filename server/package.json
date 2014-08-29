@@ -1,0 +1,31 @@
+{
+  "name": "mean-server",
+  "version": "0.1.0",
+  "description": "MEAN-Stack Workshop Backend",
+  "main": "src/main/index.js",
+  "scripts": {
+    "start": "DEBUG=workshop* node src/main/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/konzeptteam/meanstack-workshop"
+  },
+  "keywords": [
+    "MEAN",
+    "node",
+    "angular",
+    "express",
+    "mongodb"
+  ],
+  "author": "jambit GmbH",
+  "bugs": {
+    "url": "https://github.com/konzeptteam/meanstack-workshop/issues"
+  },
+  "homepage": "https://github.com/konzeptteam/meanstack-workshop",
+  "dependencies": {
+    "debug": "^1.0.4",
+    "express": "^4.8.6",
+    "mongoskin": "^1.4.4"
+  }
+}

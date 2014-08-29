@@ -1,0 +1,10 @@
+---
+applications:
+- name: meanstack
+  command: node server/src/main/index.js
+  memory: 256M
+  instances: 1
+  host: meanstack
+  domain: jcloud.jambit.com
+  path: .
+  buildpack: https://github.com/cloudfoundry/heroku-buildpack-nodejs.git

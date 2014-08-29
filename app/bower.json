@@ -1,0 +1,16 @@
+{
+  "name": "mean-client",
+  "version": "0.1.0",
+  "homepage": "https://github.com/konzeptteam/meanstack-workshop",
+  "authors": [
+    "jambit GmbH"
+  ],
+  "description": "AngularJS Client for the MEAN-Stack Workshop",
+  "keywords": [
+    "angular",
+    "mean"
+  ],
+  "dependencies": {
+    "angular": "~1.2.23"
+  }
+}
