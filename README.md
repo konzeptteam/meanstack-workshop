@@ -13,13 +13,13 @@ In the workshop we will build a simple web application, incl. frontend and backe
 ## Prerequisites
 ---------------
 (0. Install Git)
-1. Install [node.js](http://nodejs.org/download/ "node.js")
-2. Install [mongoDB](http://docs.mongodb.org/manual/installation/ "MongoDB")
-3. Check your successful installation:
-	node --version
-	mongo --version
-4. Install Bower: Execute
-	npm install bower -g
+1.	Install [node.js](http://nodejs.org/download/ "node.js")
+2.	Install [MongoDB](http://docs.mongodb.org/manual/installation/ "MongoDB")
+3.	Check your successful installation:
+		node --version
+		mongo --version
+4.	Install Bower: Execute
+		npm install bower -g
 
 All sources used in the workshop will be provided in this repository.
 All further dependencies will be installed during the workshop.
