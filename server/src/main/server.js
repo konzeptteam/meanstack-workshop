@@ -20,19 +20,21 @@ module.exports = (function() {
 	});
 
 	app.get('/coffee', function(req, res) {
-		db.getCoffees(sendDatabaseResult);
+		db.getCoffees(sendDatabaseResult(res));
 	});
 
-	app.get('/flavour', function(req, res) {
-		db.getFlavors(sendDatabaseResult);
+	app.get('/flavor', function(req, res) {
+		db.getFlavors(sendDatabaseResult(res));
 	});
 
-	var sendDatabaseResult = function(err, result) {
-		if (err) {
-			res.send(500, err);
-		} else {
-			res.json(result);
-		}
+	var sendDatabaseResult = function(res) {
+		return function(err, result) {
+			if (err) {
+				res.send(500, err);
+			} else {
+				res.json(result);
+			}
+		};
 	};
 
 	app.listen(serverPort, function() {
