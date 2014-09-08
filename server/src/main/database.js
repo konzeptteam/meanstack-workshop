@@ -23,15 +23,15 @@ module.exports = (function() {
 		fetchAllEntriesFromCollection(FLAVOURS_COLLECTION, callback);
 	};
 
-	var fetchAllEntriesFromCollection(collectionName, callback) {
+	var fetchAllEntriesFromCollection = function(collectionName, callback) {
 		db.collection(collectionName).find().toArray(function(err, result) {
-		    if (err) {
+			if (err) {
 				debug('Failed to retrieve values from collection ' + collectionName + ': ' + err);
 			}
 
 			callback(err, result);
 		});
-	}
+	};
 
 	return Database;
 })();

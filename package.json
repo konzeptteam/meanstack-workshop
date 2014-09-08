@@ -2,9 +2,9 @@
   "name": "mean-server",
   "version": "0.1.0",
   "description": "CoffeeShop Backend",
-  "main": "src/main/index.js",
+  "main": "server/src/main/index.js",
   "scripts": {
-    "start": "DEBUG=coffeeshop* node src/main/index.js",
+    "start": "DEBUG=coffeeshop* node server/src/main/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "engines": {

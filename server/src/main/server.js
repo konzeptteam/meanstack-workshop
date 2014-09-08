@@ -1,6 +1,7 @@
-module.exports(function() {
+module.exports = (function() {
 	'use strict';
 
+	var path = require('path');
 	var express = require('express');
 	var app = express();
 
@@ -12,8 +13,10 @@ module.exports(function() {
 
 	var serverPort = process.env.VCAP_APP_PORT || 3000;
 
+	app.use('/app', express.static(path.resolve(__dirname, '../../../app')));
+
 	app.get('/', function(req, res) {
-		res.send('Hello jambitees :)');
+		res.redirect('/app');
 	});
 
 	app.get('/coffee', function(req, res) {
