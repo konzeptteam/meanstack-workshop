@@ -23,3 +23,5 @@ In the workshop we will build a simple web application, incl. frontend and backe
 
 All sources used in the workshop will be provided in this repository.
 All further dependencies will be installed during the workshop.
+
+## Initial Database Setup
