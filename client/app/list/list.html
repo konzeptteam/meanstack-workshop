@@ -1,1 +1,6 @@
-<div>Here will be a list</div>
+<h1>List of Coffee</h1>
+<ul>
+	<li ng-repeat="coffee in coffees">
+		{{ coffee.name }}: {{ coffee.price }}$
+	</li>
+</ul>
