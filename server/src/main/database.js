@@ -3,7 +3,7 @@ module.exports = (function() {
 
 	var db;
 	var COFFEE_COLLECTION = 'coffee';
-	var FLAVOURS_COLLECTION = 'flavours';
+	var FLAVOURS_COLLECTION = 'flavors';
 
 	var debug = require('debug')('coffeeshop:database');
 
@@ -19,7 +19,7 @@ module.exports = (function() {
 		fetchAllEntriesFromCollection(COFFEE_COLLECTION, callback);
 	};
 
-	Database.prototype.getFlavours = function(callback) {
+	Database.prototype.getFlavors = function(callback) {
 		fetchAllEntriesFromCollection(FLAVOURS_COLLECTION, callback);
 	};
 

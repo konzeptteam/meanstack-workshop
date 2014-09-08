@@ -1,10 +1,16 @@
 ---
 applications:
-- name: meanstack
-  command: node server/src/main/index.js
+- name: coffeeshop
   memory: 256M
   instances: 1
-  host: meanstack
+  host: coffeeshop
   domain: jcloud.jambit.com
-  path: .
+  path: "."
+  command: DEBUG=coffeeshop:* node server/src/main/index.js
   buildpack: https://github.com/cloudfoundry/heroku-buildpack-nodejs.git
+  services:
+    mongodb-coffeeshop:
+      label: mongodb
+      provider: core
+      version: '2.2'
+      plan: default

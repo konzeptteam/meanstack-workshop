@@ -24,7 +24,7 @@ module.exports = (function() {
 	});
 
 	app.get('/flavour', function(req, res) {
-		db.getFlavours(sendDatabaseResult);
+		db.getFlavors(sendDatabaseResult);
 	});
 
 	var sendDatabaseResult = function(err, result) {
