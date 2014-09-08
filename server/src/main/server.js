@@ -13,7 +13,7 @@ module.exports = (function() {
 
 	var serverPort = process.env.VCAP_APP_PORT || 3000;
 
-	app.use('/app', express.static(path.resolve(__dirname, '../../../app')));
+	app.use('/app', express.static(path.resolve(__dirname, '../../../client/app')));
 
 	app.get('/', function(req, res) {
 		res.redirect('/app');
