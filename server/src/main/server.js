@@ -11,7 +11,9 @@ module.exports = (function() {
 	var dbName = process.env.NODE_ENV === 'test' ? 'coffeeshopTest' : 'coffeeshop';
 	var db = new Database(dbName);
 
-	var serverPort = process.env.VCAP_APP_PORT || 3000;
+	var cfenv = require('cfenv');
+	var appEnv = cfenv.getAppEnv();
+	var serverPort = appEnv.port;
 
 	app.use('/app', express.static(path.resolve(__dirname, '../../../client/app')));
 
@@ -30,7 +32,7 @@ module.exports = (function() {
 	var sendDatabaseResult = function(res) {
 		return function(err, result) {
 			if (err) {
-				res.send(500, err);
+				res.status(500).send(err);
 			} else {
 				res.json(result);
 			}

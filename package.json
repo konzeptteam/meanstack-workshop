@@ -28,6 +28,7 @@
   },
   "homepage": "https://github.com/konzeptteam/meanstack-workshop",
   "dependencies": {
+    "cfenv": "^1.0.0",
     "debug": "^1.0.4",
     "express": "^4.8.6",
     "mongoskin": "^1.4.4"

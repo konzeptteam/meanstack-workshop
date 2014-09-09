@@ -2,6 +2,47 @@
   "name": "mean-server",
   "version": "0.1.0",
   "dependencies": {
+    "cfenv": {
+      "version": "1.0.0",
+      "from": "cfenv@",
+      "resolved": "https://registry.npmjs.org/cfenv/-/cfenv-1.0.0.tgz",
+      "dependencies": {
+        "js-yaml": {
+          "version": "3.2.2",
+          "from": "js-yaml@3.2.x",
+          "resolved": "https://registry.npmjs.org/js-yaml/-/js-yaml-3.2.2.tgz",
+          "dependencies": {
+            "argparse": {
+              "version": "0.1.15",
+              "from": "argparse@~ 0.1.11",
+              "dependencies": {
+                "underscore": {
+                  "version": "1.4.4",
+                  "from": "underscore@~1.4.3"
+                },
+                "underscore.string": {
+                  "version": "2.3.3",
+                  "from": "underscore.string@~2.3.1"
+                }
+              }
+            },
+            "esprima": {
+              "version": "1.0.4",
+              "from": "esprima@~ 1.0.2"
+            }
+          }
+        },
+        "ports": {
+          "version": "1.1.0",
+          "from": "ports@1.1.x"
+        },
+        "underscore": {
+          "version": "1.7.0",
+          "from": "underscore@1.7.x",
+          "resolved": "https://registry.npmjs.org/underscore/-/underscore-1.7.0.tgz"
+        }
+      }
+    },
     "debug": {
       "version": "1.0.4",
       "from": "debug@^1.0.4",

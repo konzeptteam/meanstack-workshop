@@ -7,9 +7,17 @@ module.exports = (function() {
 
 	var debug = require('debug')('coffeeshop:database');
 
+	var cfenv = require('cfenv');
+	var appEnv = cfenv.getAppEnv();
+	var mongoService = appEnv.getService(/mongodb/);
+
 	var Database = function(dbName) {
+		var mongoUrl;
+
 		if (typeof dbName === 'string') {
-			db = require('mongoskin').db('mongodb://localhost:27017/' + dbName, {native_parser: true});
+			mongoUrl = mongoService ? mongoService.credentials.url : 'mongodb://localhost:27017/' + dbName;
+			debug('using MongoDB at ' + mongoUrl);
+			db = require('mongoskin').db(mongoUrl, {native_parser: true});
 		} else {
 			throw new Error('Database name parameter missing');
 		}
