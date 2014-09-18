@@ -20,7 +20,8 @@ In the workshop we will build a simple web application, incl. frontend and backe
 1. Install [node.js](http://nodejs.org/download/ "node.js")
 2. Install [MongoDB](http://docs.mongodb.org/manual/installation/ "MongoDB")
 3. Check your successful installation:
-	* ```bash node --version```
+	* ```bash
+	node --version```
 	* ```bash mongo --version```
 4. Install Bower: Execute ```bash npm install bower -g```
 
