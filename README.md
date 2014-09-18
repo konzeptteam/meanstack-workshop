@@ -20,11 +20,9 @@ In the workshop we will build a simple web application, incl. frontend and backe
 1. Install [node.js](http://nodejs.org/download/ "node.js")
 2. Install [MongoDB](http://docs.mongodb.org/manual/installation/ "MongoDB")
 3. Check your successful installation:
-	* ```shell node --version```
-	* ```shell
-	mongo --version
-	```
-4. Install Bower: Execute ```bash npm install bower -g```
+	* ```node --version```
+	* ```mongo --version```
+4. Install Bower: Execute ```npm install bower -g```
 
 All sources used in the workshop will be provided in this repository.
 
@@ -32,9 +30,19 @@ All further dependencies will be installed during the workshop.
 
 ## Initial Database Setup
 ---------------
-1. Create a folder for MongoDB to store its data. Default is */data/db*. If you choose to save your data elsewhere, create that directory and execute ```bash mongod --dbpath=<your path>```. Otherwise just execute mongod to start the MongoDB daemon after you created */data/db*
-2. Start the mongo shell by executing ```bash mongo```
+1. Create a folder for MongoDB to store its data. Default is */data/db*. If you choose to save your data elsewhere, create that directory and execute ```mongod --dbpath=<your path>```. Otherwise just execute mongod to start the MongoDB daemon after you created */data/db*
+2. Start the mongo shell by executing ```mongo```
 3. Execute the following commands in the mongo shell
-    * ```bash use coffeeshop```
-    * ```bash db.coffee.insert([{"name": "Americana", "price": 1.79}, {"name": "Cappuccino", "price": 2.49}, {"name": "Latte Macchiato", "price": 2.99}, {"name": "Espresso", "price": 1.50}]);```
-    * ```bash db.flavors.insert([{"name": "Vanilla", "price": 0.54}, {"name": "Chocolate", "price": 0.65}, {"name": "Caramel", "price": 0.77}, {"name": "Cinnamon", "price": 0.40}]);```
+    * ```use coffeeshop```
+    * ```db.coffee.insert([{"name": "Americana", "price": 1.79}, {"name": "Cappuccino", "price": 2.49}, {"name": "Latte Macchiato", "price": 2.99}, {"name": "Espresso", "price": 1.50}]);```
+    * ```db.flavors.insert([{"name": "Vanilla", "price": 0.54}, {"name": "Chocolate", "price": 0.65}, {"name": "Caramel", "price": 0.77}, {"name": "Cinnamon", "price": 0.40}]);```
+
+## Application Start-up
+---------------
+1. Go to application directory
+2. Execute ```npm install```
+3. Go to *client/app*
+4. Execute ```bower install```
+5. Go back to application directory
+6. Execute ```npm start```
+7. Open your favorite browser and open [http://127.0.0.1:6001/](http://127.0.0.1:6001/ "App")
