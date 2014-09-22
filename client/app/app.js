@@ -2,8 +2,7 @@
 
 angular.module('coffee_shop', [
 	'ngRoute',
-	'coffee_shop.list',
-	'coffee_shop.detail'
+	'coffee_shop.list'
 ])
 
 .config(['$routeProvider', function($routeProvider) {
